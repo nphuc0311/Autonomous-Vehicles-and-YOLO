@@ -8,25 +8,29 @@ This repository hosts the evaluation results of the YOLOv7 and YOLOv8 models for
 - **YOLOv7-tiny** shows commendable efficiency, making it suitable for embedded devices with limited computational resources.
 - **YOLOv8n** provides a balanced performance, particularly excelling in higher FPS on embedded devices when optimized with TensorRT.
 
+## Training Pipeline
+- **Setting 1:** We group the objects car, truck, bus, train into a single class vehicle.
+- **Setting 2:** we group the objects (car, truck, bus, train) into vehicle, (traffic light, traffic sign) into traffic control signals, (motorcycle, bicycle) into bike, and (pedestrian, rider, other person) into person.
+
 ## Performance Metrics
 All experiments used the PyTorch framework on an NVIDIA GeForce RTX A5000 GPU with 32GB of RAM and an Intel(R) Core(TM) i9-10900X processor.
 
-### Table I: Computational Cost (
-| Model        | FLOPs   | #Params | FPS (CPU w/o TRT) | FPS (GPU w/ TRT) |
-|--------------|---------|---------|-------------------|------------------|
-| YOLOv8s      | 17.06G  | 11.12M  | 31                | 554              |
-| YOLOv8n      | 4.85G   | 3M      | 59                | 947              |
-| YOLOv7-tiny  | 7.81G   | 6M      | 41                | 919              |
+### Table I: Computational Cost
+| Model        | FLOPs   | #Params | CPU | GPU <br><sup>(w/o TRT) |
+|--------------|---------|---------|-----|-----------------------|
+| YOLOv8s      | 17.06G  | 11.12M  | 31  | 229                   |
+| YOLOv8n      | 4.85G   | 3M      | 59  | 234                   |
+| YOLOv7-tiny  | 7.81G   | 6M      | 41  | 249                   |
 
 ### Table II: Comparative Analysis of YOLO Models at Various Resolutions on Our Setting 1
-| Size   | Model       | Precision | Recall | mAPval50 | mAPval50:95 | FLOPs  |
-|--------|-------------|-----------|--------|----------|-------------|--------|
-| 640x384| YOLOv8s     | 86.3%     | 72.7%  | 81.9%    | 54%         | 17.06G |
-| 640x384| YOLOv8n     | 84.9%     | 69.1%  | 78.5%    | 50.7%       | 4.85G  |
-| 640x384| YOLOv7-tiny | 84.3%     | 69.5%  | 79.4%    | 48.4%       | 7.81G  |
+| Size   | Model       | Precision | Recall | mAP<sup>val<br>50 | mAP<sup>val<br>50:95 | FLOPs  |
+|--------|-------------|-----------|--------|-------------------|----------------------|--------|
+| 640x384| YOLOv8s     | 86.3%     | 72.7%  | 81.9%             | 54%                  | 17.06G |
+| 640x384| YOLOv8n     | 84.9%     | 69.1%  | 78.5%             | 50.7%                | 4.85G  |
+| 640x384| YOLOv7-tiny | 84.3%     | 69.5%  | 79.4%             | 48.4%                | 7.81G  |
 
 ### Table III: Comparative Analysis of YOLO Models at Various Resolutions on Our Setting 2
-| Size   | Model       | Precision | Recall | mAPval50 | mAPval50:95 | FLOPs  |
+| Size   | Model       | Precision | Recall | mAP<sup>val<br>50 | mAP<sup>val<br>50:95 | FLOPs  |
 |--------|-------------|-----------|--------|----------|-------------|--------|
 | 640x384| YOLOv8s     | 75%       | 58.7%  | 65.8%    | 35.9%       | 17.07G |
 | 640x384| YOLOv8n     | 69.9%     | 52.3%  | 58%      | 30.5%       | 4.85G  |
