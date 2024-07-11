@@ -15,36 +15,36 @@ This repository hosts the evaluation results of the YOLOv7 and YOLOv8 models for
 ## Performance Metrics
 All experiments used the PyTorch framework on an NVIDIA GeForce RTX A5000 GPU with 32GB of RAM and an Intel(R) Core(TM) i9-10900X processor.
 
-### Table I: Computational Cost
+### Computational Cost
 | Model        | FLOPs   | #Params | CPU | GPU <br><sup>(w/o TRT) |
 |--------------|---------|---------|-----|-----------------------|
 | YOLOv8s      | 17.06G  | 11.12M  | 31  | 229                   |
 | YOLOv8n      | 4.85G   | 3M      | 59  | 234                   |
 | YOLOv7-tiny  | 7.81G   | 6M      | 41  | 249                   |
 
-### Table II: Comparative Analysis of YOLO Models at Various Resolutions on Our Setting 1
+### Comparative Analysis of YOLO Models on Setting 1
 | Size   | Model       | Precision | Recall | mAP<sup>val<br>50 | mAP<sup>val<br>50:95 | FLOPs  |
 |--------|-------------|-----------|--------|-------------------|----------------------|--------|
 | 640x384| YOLOv8s     | 86.3%     | 72.7%  | 81.9%             | 54%                  | 17.06G |
 | 640x384| YOLOv8n     | 84.9%     | 69.1%  | 78.5%             | 50.7%                | 4.85G  |
 | 640x384| YOLOv7-tiny | 84.3%     | 69.5%  | 79.4%             | 48.4%                | 7.81G  |
 
-### Table III: Comparative Analysis of YOLO Models at Various Resolutions on Our Setting 2
+### Comparative Analysis of YOLO Models on Setting 2
 | Size   | Model       | Precision | Recall | mAP<sup>val<br>50 | mAP<sup>val<br>50:95 | FLOPs  |
-|--------|-------------|-----------|--------|----------|-------------|--------|
-| 640x384| YOLOv8s     | 75%       | 58.7%  | 65.8%    | 35.9%       | 17.07G |
-| 640x384| YOLOv8n     | 69.9%     | 52.3%  | 58%      | 30.5%       | 4.85G  |
-| 640x384| YOLOv7-tiny | 71.2%     | 53%    | 59.4%    | 29.2%       | 7.83G  |
+|--------|-------------|-----------|--------|-------------------|----------------------|--------|
+| 640x384| YOLOv8s     | 75%       | 58.7%  | 65.8%             | 35.9%                | 17.07G |
+| 640x384| YOLOv8n     | 69.9%     | 52.3%  | 58%               | 30.5%                | 4.85G  |
+| 640x384| YOLOv7-tiny | 71.2%     | 53%    | 59.4%             | 29.2%                | 7.83G  |
 
-### Performance Evaluation on Embedded Devices
+## Performance Evaluation on Embedded Devices
 Below is a table showcasing the frames per second (FPS) achieved by various YOLO models at the resolution tested (640x384), with batch size set to 1. This metric is crucial for understanding the real-time object detection capabilities of each model on NVIDIA Xavier and TX2 platforms.
 
-### Table: FPS Performance on Embedded Devices at 640x384 Resolution (Batch Size = 1)
+### FPS Performance on Embedded Devices
 | Model       | FPS (Xavier) | FPS (TX2) |
 |-------------|--------------|-----------|
-| YOLOv8n     | 184 ±40      | 83 ±0     |
-| YOLOv8s     | 101 ±10      | 38 ±0     |
-| YOLOv7-tiny | 172 ±30      | 76 ±0     |
+| YOLOv8n     | 184          | 83        |
+| YOLOv8s     | 101          | 38        |
+| YOLOv7-tiny | 172          | 76        |
 
 ## Conclusion
 The YOLO models, particularly YOLOv8 variants, demonstrate significant potential for use in autonomous vehicle technologies, providing a strong balance between speed and accuracy. Further optimization on computational efficiency and model robustness is suggested to enhance real-time applicability.
