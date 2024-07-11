@@ -3,9 +3,6 @@
 ## Introduction
 This repository hosts the evaluation results of the YOLOv7 and YOLOv8 models for real-time object detection in autonomous vehicles, utilizing the Berkeley Deep Drive BDD100K dataset.
 
-## Results Summary
-Our study focuses on the performance of YOLO models on embedded devices, aiming to balance detection accuracy and computational efficiency crucial for real-time applications in autonomous vehicles.
-
 ### Key Findings:
 - **YOLOv8s** offers the best performance in terms of precision and mAP values across various resolutions but at a higher computational cost.
 - **YOLOv7-tiny** shows commendable efficiency, making it suitable for embedded devices with limited computational resources.
@@ -47,3 +44,5 @@ Below is a table showcasing the frames per second (FPS) achieved by various YOLO
 
 ## Conclusion
 The YOLO models, particularly YOLOv8 variants, demonstrate significant potential for use in autonomous vehicle technologies, providing a strong balance between speed and accuracy. Further optimization on computational efficiency and model robustness is suggested to enhance real-time applicability.
+
+For more detailed information and analysis on the performance of these models, you can read more in our full paper [here](https://drive.google.com/file/d/1cMnRMVUHuMmVHQIK4f92Yjyemg7H-CKa/view?usp=drive_link).
