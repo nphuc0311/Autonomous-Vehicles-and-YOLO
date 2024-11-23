@@ -49,4 +49,4 @@ Below is a table showcasing the frames per second (FPS) achieved by various YOLO
 ## Conclusion
 The YOLO models, particularly YOLOv8 variants, demonstrate significant potential for use in autonomous vehicle technologies, providing a strong balance between speed and accuracy. Further optimization on computational efficiency and model robustness is suggested to enhance real-time applicability.
 
-For more detailed information and analysis on the performance of these models, you can read more in our full paper [here](https://drive.google.com/file/d/1cMnRMVUHuMmVHQIK4f92Yjyemg7H-CKa/view?usp=drive_link).
+For more detailed information and analysis on the performance of these models, you can read more in our full paper [here](https://drive.google.com/file/d/16zPZg5q4vZSM3FgP32VoWCn3tY6w3gcN/view?usp=sharing).
